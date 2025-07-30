@@ -502,11 +502,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 1395183478}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8d76d1424ec5af24aabede0625ae572a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08876595, y: -0.35}
+  m_Offset: {x: 0.11281714, y: -0.35400853}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -517,7 +517,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75676984, y: 0.89675885}
+  m_Size: {x: 0.8048722, y: 0.8887418}
   m_EdgeRadius: 0
 --- !u!50 &1395183484
 Rigidbody2D:
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036a3004a177cb5409add15d10746d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
+  m_JumpForce: 800
   m_CrouchSpeed: 0.4
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -564,10 +564,34 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 1395183483}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1395183487}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1395183487}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnCrouching
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1395183487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1395183485}
-  runSpeed: 40
+  animator: {fileID: 1395183490}
+  runSpeed: 60
 --- !u!58 &1395183489
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -632,7 +657,7 @@ GameObject:
   - component: {fileID: 2050017625}
   - component: {fileID: 2050017624}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050017623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.66, y: -5.27, z: 0}
+  m_LocalPosition: {x: -8.82, y: -4.1, z: 0}
   m_LocalScale: {x: 10.010314, y: 1.3498851, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
