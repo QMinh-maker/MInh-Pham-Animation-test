@@ -7,8 +7,11 @@ public class PlayerMovement : MonoBehaviour
    public CharacterController2D controller;
     
     public Animator animator;
+    //private const HorizontalWrapMo
+
     float HorizontalMove = 0f;
     public float runSpeed = 40f;
+
     bool jump = false;
     bool crouch = false;
     // Update is called once per frame
