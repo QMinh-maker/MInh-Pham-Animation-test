@@ -411,14 +411,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1395183481}
   - component: {fileID: 1395183480}
+  - component: {fileID: 1395183490}
   - component: {fileID: 1395183484}
   - component: {fileID: 1395183483}
   - component: {fileID: 1395183485}
   - component: {fileID: 1395183487}
   - component: {fileID: 1395183489}
-  - component: {fileID: 1395183490}
   m_Layer: 3
-  m_Name: DragonKnight
+  m_Name: DragonWarrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036a3004a177cb5409add15d10746d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 800
+  m_JumpForce: 900
   m_CrouchSpeed: 0.4
   m_MovementSmoothing: 0.05
   m_AirControl: 1

@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
         }
 
-        OnCrouching(crouch);
+        //OnCrouching(crouch);
     }
 
     public void OnLanding()
@@ -54,9 +54,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool(Animator_IsJumping, false);
     }
 
-    public void OnCrouching(bool isCrouching)
+    public void OnCrouching(bool IsCrouching)
     {
-        animator.SetBool(Animator_IsCrouching, isCrouching);
+        animator.SetBool(Animator_IsCrouching, IsCrouching);
     }
 
     void FixedUpdate()
