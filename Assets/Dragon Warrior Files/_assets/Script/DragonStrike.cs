@@ -16,7 +16,7 @@ public class DragonStrike : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Strike();
                 nextAttackTime = Time.time + 1f / attackRate;

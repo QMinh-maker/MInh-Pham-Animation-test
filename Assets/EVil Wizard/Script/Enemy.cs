@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         }
 
         // Gọi hàm biến mất sau 1.5s (thời gian để animation chết chạy xong)
-        Invoke(nameof(Disappear), 3.5f);
+        Invoke(nameof(Disappear), 5.0f);
     }
 
     void Disappear()

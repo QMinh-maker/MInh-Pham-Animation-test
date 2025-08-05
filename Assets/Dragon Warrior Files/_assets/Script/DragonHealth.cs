@@ -41,7 +41,7 @@ public class DragonHealth : MonoBehaviour
         }
 
         // Gọi hàm biến mất sau 1.5s (thời gian để animation chết chạy xong)
-        Invoke(nameof(Disappear), 1.5f);
+        Invoke(nameof(Disappear), 1.0f);
     }
 
     void Disappear()
