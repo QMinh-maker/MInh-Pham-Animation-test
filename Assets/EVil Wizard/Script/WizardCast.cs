@@ -18,7 +18,7 @@ public class WizardCast : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.K))
             {
                 Fire();
                 nextAttackTime = Time.time + 1f / attackRate;
