@@ -5,16 +5,20 @@ using UnityEngine;
 public class DragonHealth : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 100;
+    public int maxHealth = 1000;
     int currentHealth;
+
+    public HealthBar leftHealthBar;
     void Start()
     {
         currentHealth = maxHealth;
+        leftHealthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        leftHealthBar.SetHealth(currentHealth);
 
         animator.SetTrigger("Hurt");
 

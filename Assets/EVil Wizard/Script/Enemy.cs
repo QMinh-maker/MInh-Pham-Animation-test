@@ -1,21 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
 
     public Animator animator;
-    public int maxHealth = 100;
+    public int maxHealth = 1000;
     int currentHealth;
+
+    public HealthBar RightHealthBar;
+
+    
     void Start()
     {
         currentHealth = maxHealth;
+        RightHealthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        RightHealthBar.SetHealth(currentHealth);
 
         animator.SetTrigger("Hurt");
 
