@@ -28,7 +28,7 @@ public class WizardCast : MonoBehaviour
 
     void Fire()
     {
-        animator.SetTrigger("Fire");
+        animator.SetTrigger("Strike");
         Collider2D[] hitplayer = Physics2D.OverlapCircleAll(attackPoint.position,
             attackRange, playerLayer);
 
